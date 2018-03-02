@@ -17,7 +17,7 @@ type gomopost struct {
 	address string
 }
 
-func NewGomoPost(address string) GomoPoster {
+func NewClient(address string) GomoPoster {
 	return &gomopost{
 		address: address,
 	}
