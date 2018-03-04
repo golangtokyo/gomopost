@@ -39,7 +39,7 @@ func (g *gomopost) Post(name, msg string) error {
 	}
 
 	buf := bytes.NewBuffer(pb)
-	req, err := http.NewRequest("POST", g.address, buf)
+	req, err := http.NewRequest("POST", g.address+"/messages", buf)
 	if err != nil {
 		return fmt.Errorf("failed to create post request: %s", err.Error())
 	}
