@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/pankona/gomopost"
+	"github.com/golangtokyo/gomopost"
 	"github.com/urfave/cli"
 )
 
@@ -28,8 +28,8 @@ var GlobalFlags = []cli.Flag{
 }
 
 func defaultCommand(c *cli.Context) {
-	cli := gomopost.NewClient("http://localhost:8080")
-	err := cli.Post("pankona", "test message from pankona")
+	cli := gomopost.NewClient(c.GlobalString("address"))
+	err := cli.Post(c.GlobalString("name"), c.GlobalString("message"))
 	if err != nil {
 		fmt.Printf("failed to post: %s\n", err.Error())
 	}
