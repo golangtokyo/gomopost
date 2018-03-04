@@ -28,8 +28,8 @@ var GlobalFlags = []cli.Flag{
 }
 
 func defaultCommand(c *cli.Context) {
-	cli := gomopost.NewClient(c.GlobalString("address"))
-	err := cli.Post(c.GlobalString("name"), c.GlobalString("message"))
+	client := gomopost.NewClient(c.GlobalString("address"))
+	err := client.Post(c.GlobalString("name"), c.GlobalString("message"))
 	if err != nil {
 		fmt.Printf("failed to post: %s\n", err.Error())
 	}
