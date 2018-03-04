@@ -56,7 +56,11 @@ func (g *gomopost) Post(name, msg string) error {
 	if err != nil {
 		return fmt.Errorf("post request failed: %s", err.Error())
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if e := resp.Body.Close(); e != nil {
+			fmt.Printf("failed to close response body: %s", e.Error())
+		}
+	}()
 
 	_, err = ioutil.ReadAll(resp.Body)
 	if err != nil {
