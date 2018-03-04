@@ -24,14 +24,14 @@ func NewClient(address string) GomoPoster {
 }
 
 type payload struct {
-	Name    string `json:"name"`
-	Message string `json:"message"`
+	Name string `json:"name"`
+	Body string `json:"body"`
 }
 
 func (g *gomopost) Post(name, msg string) error {
 	p := payload{
-		Name:    name,
-		Message: msg,
+		Name: name,
+		Body: msg,
 	}
 	pb, err := json.Marshal(p)
 	if err != nil {
