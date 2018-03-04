@@ -9,6 +9,7 @@ import (
 	"net/http"
 )
 
+// GomoPoster is an interface to post message to chatserver
 type GomoPoster interface {
 	Post(name, msg string) error
 }
@@ -17,6 +18,7 @@ type gomopost struct {
 	address string
 }
 
+// NewClient returns an instance of GomoPoster
 func NewClient(address string) GomoPoster {
 	return &gomopost{
 		address: address,
