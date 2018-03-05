@@ -1,4 +1,4 @@
-package io.pankona.gomopost;
+package io.golangtokyo.gomopost;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

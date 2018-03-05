@@ -1,4 +1,4 @@
-package io.pankona.gomopost;
+package io.golangtokyo.gomopost;
 
 import org.junit.Test;
 

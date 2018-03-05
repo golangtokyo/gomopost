@@ -1,4 +1,4 @@
-package io.pankona.gomopost;
+package io.golangtokyo.gomopost;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("io.pankona.gomopost", appContext.getPackageName());
+        assertEquals("io.golangtokyo.gomopost", appContext.getPackageName());
     }
 }
