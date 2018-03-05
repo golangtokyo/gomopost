@@ -61,7 +61,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     poster.post(name, message);
                 } catch (Exception ex) {
                     ex.printStackTrace();
+                    return;
                 }
+                mMessage.setText(""); // clear message after post
                 break;
         }
     }
