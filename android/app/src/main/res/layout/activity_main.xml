@@ -29,7 +29,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="address (e.g. http://localhost:8080/)"
+        android:text="https://natto-umeboshi-20180303.appspot.com"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/go"
         app:layout_constraintStart_toStartOf="parent"
